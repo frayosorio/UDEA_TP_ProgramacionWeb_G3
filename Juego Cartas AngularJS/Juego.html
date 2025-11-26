@@ -1,9 +1,27 @@
 <html ng-app="JuegoCartas">
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <script src="js/juegos.js"></script>
-    </head>
-    <body ng-controller="ControladorJuegoCartas">
 
-    </body>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/juego.js"></script>
+    <script src="js/carta.js"></script>
+    <link href="estilos/estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-controller="ControladorJuegoCartas">
+    <h1 id="titulo">Juego de Cartas</h1>
+
+    <div id="mesa">
+        <ul>
+            <li ng-repeat="carta in cartas" class="carta">
+                <img src="{{carta.getImagen()}}" title="{{carta.getNombre()}} {{carta.getPinta()}}">
+            </li>
+        </ul>
+    </div>
+
+    <div class="botones">
+        <a href="#" ng-click="repartir()" class="boton">Repartir</a>
+        <a href="#" ng-click="verificar()" class="boton">Chequear</a>
+    </div>
+</body>
+
 </html>
