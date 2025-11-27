@@ -16,6 +16,16 @@
                 <img src="{{carta.getImagen()}}" title="{{carta.getNombre()}} {{carta.getPinta()}}">
             </li>
         </ul>
+        <table>
+            <tr ng-repeat="grupo in grupos">
+                <td>
+                    {{grupo.tipo}}
+                </td>
+                <td>
+                    {{grupo.nombreCarta}}
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div class="botones">

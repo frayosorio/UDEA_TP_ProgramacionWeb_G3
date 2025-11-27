@@ -40,7 +40,7 @@ function Carta() {
     /* Metodo que devuelve el indice en la lista de nombres de carta
     Ace=0, Dos=1, Tres=2, ..., Diez=9, Jack=10, Queen=11, King=12 */
     this.getIndiceNombre = function () {
-        residuo = indice % 13;
+        residuo = this.indice % 13;
         return residuo == 0 ? 12 : residuo - 1;
     }
 }

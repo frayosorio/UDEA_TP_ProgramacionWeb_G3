@@ -117,12 +117,33 @@ body {
     -o-background-size: 5px 5px;
     background-size: 5px 5px;
 
-    display: flex !important;
-    justify-content: center;
-    align-items: center ;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; /* Centra vertical */
+    align-items: center;     /* Centra horizontal */
 
 }
 
+#mesa ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* centra los li */
+}
+
 .carta{
-    display: inline;
+    display: inline-block;
+}
+
+table, th , td  {
+  border: 1px solid grey; /* caracteristicas del  borde */
+  border-collapse: collapse; /* los bordes no se separan */
+  padding: 5px; /* Espacio alrededor de los objetos contenidos */
+  margin: 0 auto; /* Ayuda a centrar en el contenedor */
+}
+table tr:nth-child(odd) {
+  background-color: #adacac; /* Color de fila impar gris */
+}
+table tr:nth-child(even) {
+  background-color: #ffffff; /* Color de fila par blanco */
 }
